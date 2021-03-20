@@ -14,6 +14,6 @@ df = pd.read_csv(fileInput, names=header_list)
 print(df)
 # # %%
 
-df.plot("Dato", ["Temperatur1", "Luftfugtighed1"], subplots=True)
+df.plot("Tid", ["Temperatur1", "Luftfugtighed1"], subplots=True)
 plt.savefig('Plot.png',dpi=300)
 # %%
