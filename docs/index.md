@@ -1,5 +1,9 @@
-## Temperaturlogging
+---
+layout: default
+description: Temperaturlogging i saltvand.
+---
 
+# Temperaturlogging
 
 <ul>
   {% for post in site.posts %}
