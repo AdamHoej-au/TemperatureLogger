@@ -6,7 +6,6 @@ description: Temperaturlogging i saltvand.
 # Temperaturlogging af saltvandsakvarium
 
 Mere om [projektet]({{ site.baseurl }}{% link about.md %}).
-
 <ul>
   {% for post in site.posts %}
     <li>
@@ -14,4 +13,3 @@ Mere om [projektet]({{ site.baseurl }}{% link about.md %}).
     </li>
   {% endfor %}
 </ul>
-
