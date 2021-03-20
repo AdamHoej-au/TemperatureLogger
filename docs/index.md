@@ -3,7 +3,9 @@ layout: default
 description: Temperaturlogging i saltvand.
 ---
 
-# Temperaturlogging
+# Temperaturlogging af saltvandsakvarium
+
+Mere om [projektet]({{ site.baseurl }}{% link about.md %}).
 
 <ul>
   {% for post in site.posts %}
@@ -12,3 +14,4 @@ description: Temperaturlogging i saltvand.
     </li>
   {% endfor %}
 </ul>
+
