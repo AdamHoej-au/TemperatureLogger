@@ -11,3 +11,5 @@ For at sikre at temperaturen i akvariet ikke afviger fra en række givne paramet
 
 # Hvordan skal det måles?
 Hver måling bliver lavet med en DS18B20 og vil blive logget på en Raspberry Pi Zero, hvorpå der vil køre en række Python scripts til udførsel af databehandling direkte på enheden. Denne data kan let tilgåes vha. en FTP server.
+
+![image](https://user-images.githubusercontent.com/56192310/111867149-7c52a480-8972-11eb-93cd-d36dc366bb28.png)
