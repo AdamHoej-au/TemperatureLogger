@@ -17,9 +17,9 @@ print(sensors)
     
 while True:
    for sensor in sensors:
-    for idx, val in enumerate(sensornames):
-       id = val
-    # id = sensor.split("/")[5]
+    # for idx, val in enumerate(sensornames):
+    #    print(idx,val)
+    id = sensor.split("/")[5]
     try:
         f = open(sensor, "r")
         data = f.read()
