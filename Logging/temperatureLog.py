@@ -10,9 +10,12 @@ import time
 # Typical reading
 # 73 01 4b 46 7f ff 0d 10 41 : crc=41 YES
 # 73 01 4b 46 7f ff 0d 10 41 t=23187
-while True:
+sensors = glob.glob("/sys/bus/w1/devices/28-00*/w1_slave")
 
-   for sensor in glob.glob("/sys/bus/w1/devices/28-00*/w1_slave"):
+print(sensors)
+
+while True:
+   for sensor in sensors:
       id = sensor.split("/")[5]
       try:
          f = open(sensor, "r")
