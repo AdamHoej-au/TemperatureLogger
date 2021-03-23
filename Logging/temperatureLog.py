@@ -29,7 +29,7 @@ print(sensors)
 try:
 	f = open(logFile,'a+')
 	if os.stat(logFile).st_size==0:
-		f.write('Name,Time,Temperature\r\n')
+		f.write('Name,Date,Time,Temperature\r\n')
 		f.flush()
 except:
 	pass
@@ -38,7 +38,8 @@ except:
 
 
 while True:
-   date_log = str(datetime.datetime.now())
+   date_log = str(time.strftime('%y/%m/%d')) + ','
+   date_log += str(time.strftime('%H:%M:%S'))
 #    print("Next Temp Set")
    def get_temp(device):
       #To read the sensor data, just open the w1_slave file
@@ -52,7 +53,7 @@ while True:
               #will occur so lets handle it gracefully
             try:
                 if float(temp) == 0:
-                    deg_f = 32
+                    deg_f = 999.9
                 else:
                     deg_f = (float(temp)/1000.00)
             except:
