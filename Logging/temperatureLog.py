@@ -22,7 +22,7 @@ sensors = {}
 sensors["28-00000846c002"] = "Johnny"
 sensors["28-0000084718f2"] = "Allan"
 # sensors["28-0000084718f2"] = "Lars"
-logFile = {"/Logfiles/TemperatureLog.csv"}
+logFile = '/Logfiles/TemperatureLog.csv'
 
 print(sensors)
 
