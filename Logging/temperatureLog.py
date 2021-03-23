@@ -22,13 +22,14 @@ sensors = {}
 sensors["28-00000846c002"] = "Johnny"
 sensors["28-0000084718f2"] = "Allan"
 # sensors["28-0000084718f2"] = "Lars"
-logFile = '../Logs/TemperatureLog.csv'
+logPath = '../Logs/'
+logFile = 'TemperatureLog.csv'
 
 print(sensors)
 
 try:
-	f = open(logFile,'a+')
-	if os.stat(logFile).st_size==0:
+	f = open(logPath + logFile,'a+')
+	if os.stat(logPath + logFile).st_size==0:
 		f.write('Name,Date,Time,Temperature\r\n')
 		f.flush()
 except:
@@ -38,7 +39,7 @@ except:
 
 
 while True:
-   date_log = str(time.strftime('%y/%m/%d')) + ','
+   date_log = str(time.strftime('%y-%m-%d')) + ','
    date_log += str(time.strftime('%H:%M:%S'))
 #    print("Next Temp Set")
    def get_temp(device):
@@ -63,7 +64,7 @@ while True:
 
    for sensor in sensors:
         sensor_name = sensors[sensor]  # <-- grabs the sensor name given to it
-        with open(logFile, 'a') as f:
+        with open(logPath + logFile, 'a') as f:
             s = sensor_name + ','
             s += date_log + ','
             # <-- path added here to access sensor
