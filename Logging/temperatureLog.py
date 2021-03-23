@@ -26,6 +26,17 @@ logFile = {"/Logfiles/TemperatureLog.csv"}
 
 print(sensors)
 
+try:
+	f = open(logFile,'a+')
+	if os.stat(logFile).st_size==0:
+		f.write('Name,Time,Temperature\r\n')
+		f.flush()
+except:
+	pass
+
+
+
+
 while True:
    date_log = str(datetime.datetime.now())
 #    print("Next Temp Set")
