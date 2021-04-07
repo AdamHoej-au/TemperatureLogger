@@ -7,6 +7,7 @@ import glob
 import datetime
 import time
 from time import sleep
+from sensorlist import sensors
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -15,12 +16,9 @@ os.system('modprobe w1-therm')
 # 2016-04-25
 # Public Domain
 
-# Typical reading
-# 73 01 4b 46 7f ff 0d 10 41 : crc=41 YES
-# 73 01 4b 46 7f ff 0d 10 41 t=23187
-sensors = {}
-sensors["28-00000846c002"] = "Johnny"
-sensors["28-0000084718f2"] = "Allan"
+# sensors = {}
+# sensors["28-00000846c002"] = "Johnny"
+# sensors["28-0000084718f2"] = "Allan"
 # sensors["28-0000084718f2"] = "Lars"
 logPath = '../Logs/'
 logFile = 'TemperatureLog.csv'
@@ -76,4 +74,5 @@ while True:
           #When there are multiple devices, a short pause
           #interval between reading sensors seems to work best
         time.sleep(1)
-   time.sleep(6)
+
+   time.sleep(30)

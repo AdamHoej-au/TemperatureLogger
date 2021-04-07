@@ -1,0 +1,17 @@
+@startuml
+mainframe **BDD:** Temperature Logger
+object "Raspberry Pi" as rpi
+object "FTP Server" as ftp
+object "5V Supply" as psu
+object "Display" as disp
+
+object "Temperature Sensor\nDS18B20" as TempSens
+
+rpi "1" *-- "3" TempSens
+rpi *-- ftp
+rpi *-- disp
+psu --> disp
+psu --> rpi
+psu --> TempSens
+@enduml
+
