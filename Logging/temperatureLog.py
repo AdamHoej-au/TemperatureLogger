@@ -7,7 +7,7 @@ import glob
 import datetime
 import time
 from time import sleep
-from sensorlist import sensors
+from sensorList import sensors
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -75,4 +75,4 @@ while True:
           #interval between reading sensors seems to work best
         time.sleep(1)
 
-   time.sleep(30)
+   time.sleep(900)
